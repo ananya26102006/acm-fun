@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ACM FUN — Contribution Guide</title>
+<style>
+  :root{
+    --bg:#071026; --card:#081428; --accent:#06b6d4; --accent2:#8b5cf6; --muted:#9fb4c9;
+    --glass: rgba(255,255,255,0.02); --radius:12px; --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background:linear-gradient(180deg,#020417 0%, #071426 100%); color:#eaf6ff;
+    display:flex; align-items:center; justify-content:center; padding:28px;
+  }
+  .container{width:100%; max-width:var(--maxw); border-radius:var(--radius); overflow:hidden;
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.003));
+    box-shadow:0 18px 60px rgba(2,6,23,0.7); border:1px solid rgba(255,255,255,0.03)}
+  header{padding:20px 24px; display:flex; gap:16px; align-items:center; justify-content:space-between; background:linear-gradient(90deg, rgba(255,255,255,0.006), rgba(255,255,255,0.003)); border-bottom:1px solid rgba(255,255,255,0.02)}
+  .brand{display:flex; gap:14px; align-items:center}
+  .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#021}
+  h1{margin:0;font-size:1.25rem}
+  p.lead{margin:2px 0 0 0;color:var(--muted);font-size:.96rem}
+  .body{display:grid;grid-template-columns:1fr 360px;gap:20px;padding:22px}
+  .card{background:var(--card);border-radius:10px;padding:18px;border:1px solid var(--glass);box-shadow:0 8px 26px rgba(2,6,23,0.45)}
+  h2{margin:0 0 10px 0;color:var(--accent)}
+  .muted{color:var(--muted)}
+  pre{background:rgba(0,0,0,0.12);padding:12px;border-radius:8px;overflow:auto;color:#e6f8ff}
+  code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace}
+  .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;color:white;background:linear-gradient(90deg,var(--accent2),var(--accent));box-shadow:0 8px 22px rgba(7,14,40,0.45)}
+  .ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:#cfe8ff;text-decoration:none}
+  footer{padding:14px 22px;border-top:1px solid rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:.92rem}
+  @media (max-width:920px){.body{grid-template-columns:1fr}}
+  a:focus {outline:3px solid rgba(124,58,237,0.14);outline-offset:3px}
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="ACM FUN contribution guide">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">AF</div>
+        <div>
+          <h1>ACM FUN — React.js Project</h1>
+          <p class="lead">ACM FUN is an initiative by PECACM for beginners to build interactive web tools and games using React.js.</p>
+        </div>
+      </div>
+      <div>
+        <a class="btn" href="https://acm-fun.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+      </div>
+    </header>
+
+    <div class="body">
+      <main class="card" tabindex="0">
+        <section>
+          <h2>Description</h2>
+          <p class="muted">ACM FUN engages beginners with interactive Activities and Games built in React. Activities include simple web tools and generators. Games include Wordle, Tic-Tac-Toe, and more.</p>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Features</h2>
+          <ul class="muted">
+            <li>Interactive React UI</li>
+            <li>Beginner-friendly contribution flow</li>
+            <li>Two sections: Activities and Games</li>
+            <li>Community collaboration and learning</li>
+          </ul>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Tech Used</h2>
+          <p class="muted">React.js for the frontend. Vercel for deployment.</p>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>How to Start</h2>
+          <ol class="muted">
+            <li>Clone the repository:
+              <pre><code>git clone https://github.com/PEC-CSS/acm-fun.git
+cd acm-fun</code></pre>
+            </li>
+            <li>Install dependencies:
+              <pre><code>npm install</code></pre>
+            </li>
+            <li>Run the app:
+              <pre><code>npm start</code></pre>
+            </li>
+            <li>Open <code>http://localhost:3000</code> in your browser.</li>
+          </ol>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Where to Add a New Game or Activity</h2>
+          <p class="muted">Follow the directory structure and add components as React pages:</p>
+          <pre><code>src/pages/games/      // add game components here
+src/pages/activities/ // add activity components here
+src/styles/pages/games/       // css for games
+src/styles/pages/activities/  // css for activities
+src/data/content.js           // add an entry so the component appears on the site</code></pre>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Contribution Steps</h2>
+          <ol class="muted">
+            <li>Fork the repository and create a branch:
+              <pre><code>git checkout -b feature/your-feature-name</code></pre>
+            </li>
+            <li>Create your React component in the appropriate folder and its CSS file.</li>
+            <li>Add an entry in <code>src/data/content.js</code> with required metadata so the new page is picked up by the site.</li>
+            <li>Run locally and verify UI, responsiveness, and accessibility.</li>
+            <li>Commit & push your changes and open a Pull Request with a clear description.</li>
+          </ol>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>content.js — Add Entry Example</h2>
+          <pre><code>{
+  id: "my-awesome-game",
+  title: "My Awesome Game",
+  type: "game",
+  componentPath: "games/MyAwesomeGame",
+  thumbnail: "/images/my-awesome-game.png",
+  tags: ["puzzle","react"],
+  difficulty: "beginner"
+}</code></pre>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Best Practices</h2>
+          <ul class="muted">
+            <li>Keep components modular and small.</li>
+            <li>Follow existing coding style and naming conventions.</li>
+            <li>Make CSS scoped to the page and reuse global variables when available.</li>
+            <li>Test on mobile and desktop; ensure keyboard accessibility and proper focus management.</li>
+            <li>Document how to run and test the component in a short README or the PR description.</li>
+          </ul>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Do Not</h2>
+          <ul class="muted">
+            <li>Do not add large media assets without optimization.</li>
+            <li>Do not include secrets or API keys in the repo.</li>
+            <li>Do not change unrelated files; keep PRs minimal and focused.</li>
+          </ul>
+        </section>
+
+      </main>
+
+      <aside class="card" aria-label="sidebar">
+        <section>
+          <h2>Quick Links</h2>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+            <a class="btn" href="https://acm-fun.vercel.app/" target="_blank" rel="noopener">Live App</a>
+            <a class="ghost" href="https://github.com/PEC-CSS/acm-fun" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Example Component Pattern</h2>
+          <pre><code>import React from 'react';
+import './MyAwesomeGame.css';
+
+export default function MyAwesomeGame(){
+  return (
+    &lt;div className="my-awesome-game"&gt;
+      &lt;h2&gt;My Awesome Game&lt;/h2&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Styling Pattern</h2>
+          <pre><code>.my-awesome-game {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}</code></pre>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Testing & Validation</h2>
+          <p class="muted">Verify the component mounts without errors, matches the route, and appears in the Activities/Games section after adding content.js entry.</p>
+        </section>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div class="muted">Follow existing CONTRIBUTING.md rules in the repo. Keep PRs small and well-documented.</div>
+      <div class="muted">Happy contributing — ACM FUN</div>
+    </footer>
+  </div>
+</body>
+</html>
